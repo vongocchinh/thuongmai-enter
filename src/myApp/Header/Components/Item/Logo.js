@@ -70,6 +70,7 @@ const Logos = () => {
   };
 
   const [ expanded,setExpanded] = React.useState("panel1");
+  console.log(expanded);
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
