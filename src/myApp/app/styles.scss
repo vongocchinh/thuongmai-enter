@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin-left: 7%;
+    margin-right: 7%;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+
+$res_650: "only screen and (max-width: 650px)";
+@mixin responsive_650() {
+    @media #{$res_650} {
+        @content;
+    }
+}
+@include responsive_650() {
+    .container{
+        margin-left: 4%;
+        margin-right: 4%;
+        width: auto;
+        height: auto;
+    }
+}
+
+
+
+
+$res_450: "only screen and (max-width: 450px)";
+@mixin responsive_450() {
+    @media #{$res_450} {
+        @content;
+    }
+}
+@include responsive_450() {
+    .container{
+        margin-left: 2%;
+        margin-right: 2%;
+        width: auto;
+        height: auto;
+    }
+}

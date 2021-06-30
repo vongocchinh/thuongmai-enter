@@ -1,0 +1,127 @@
+.footer {
+    width: 100%;
+    height: 420px;
+    background-color: #f8f8f8;
+}
+.footer-container {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    .footer-container-left {
+        width: 40%;
+        height: 100%;
+        .footer-container-left-1 {
+            width: 100%;
+            height: 100px;
+            font-size: 21px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            p {
+                margin-top: 5px;
+            }
+            .size-icon-footer {
+                font-size: 40px;
+                margin-right: 5px;
+            }
+        }
+        .footer-container-left-2 {
+            width: 100%;
+            height: 100px;
+        }
+        .footer-container-left-3 {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: flex-start;
+            .FacebookIcon {
+                font-size: 32px;
+                margin-right: 15px;
+                color: #939393;
+            }
+        }
+    }
+    .footer-container-right {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        div {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            a {
+                padding: 10px;
+                color: black;
+                word-wrap: normal;
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #eaeaea;
+
+    .footer-footer {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+$res_1000: "only screen and (max-width: 1000px)";
+@mixin responsive_1000() {
+    @media #{$res_1000} {
+        @content;
+    }
+}
+@include responsive_1000() {
+    .footer {
+        height: auto;
+    }
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .footer-container-left {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footer-container-right {
+            width: 100%;
+        }
+    }
+}
+
+$res_600: "only screen and (max-width: 600px)";
+@mixin responsive_600() {
+    @media #{$res_600} {
+        @content;
+    }
+}
+@include responsive_600() {
+    footer {
+        padding-bottom: 10px;
+        clear: both;
+        height: auto;
+        .footer-footer {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 10px;
+            
+        }
+    }
+}
