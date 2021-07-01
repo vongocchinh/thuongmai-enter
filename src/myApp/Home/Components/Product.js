@@ -12,6 +12,11 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
+import SW from './../asset/sw.jpg';
+import SWP from './../asset/sqp.jpg';
+import SWB from './../asset/swb.jpg';
+import SWB2 from './../asset/sqp.jpg';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -68,11 +73,11 @@ const Product = () => {
               <div>
                 <img
                   alt=""
-                  src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/GamePad-300x300.jpg"
+                  src={SWP}
                 />
               </div>
               <div>
-                <Link to="/a">Game Console Controller + USB 3.0 Cable</Link>
+                <Link to="/detail">Game Console Controller + USB 3.0 Cable</Link>
               </div>
               <div>
                 <h1>$99.00</h1>
@@ -119,10 +124,10 @@ const Product = () => {
                             <p className="product-name-home">
                               Wireless Audio System Multiroom 360
                             </p>
-                            <Link to="/a" className="product-img-home">
+                            <Link to="/detail" className="product-img-home">
                               <img
                                 alt=""
-                                src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/Smartwatch-300x300.jpg"
+                                src={SW}
                               />
                             </Link>
                             <div className="price-product-home">
@@ -149,10 +154,10 @@ const Product = () => {
                             <p className="product-name-home">
                               Wireless Audio System Multiroom 360
                             </p>
-                            <Link to="/a" className="product-img-home">
+                            <Link to="/detail" className="product-img-home">
                               <img
                                 alt=""
-                                src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/1-300x300.jpg"
+                                src={SWB2}
                               />
                             </Link>
                             <div className="price-product-home">
@@ -179,10 +184,10 @@ const Product = () => {
                             <p className="product-name-home">
                               Wireless Audio System Multiroom 360
                             </p>
-                            <Link to="/a" className="product-img-home">
+                            <Link to="/detail" className="product-img-home">
                               <img
                                 alt=""
-                                src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/Laptop-300x300.jpg"
+                                src={SWB}
                               />
                             </Link>
                             <div className="price-product-home">

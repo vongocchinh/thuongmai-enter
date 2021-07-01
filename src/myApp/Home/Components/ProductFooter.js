@@ -1,5 +1,8 @@
 import React from 'react';
 import './styles/productFooter.scss';
+import SW from './../asset/sqp.jpg'
+import SW2 from './../asset/swb.jpg'
+import SW3 from './../asset/sw.jpg'
 const ProductFooter=()=>{
     return (
         <>
@@ -10,7 +13,7 @@ const ProductFooter=()=>{
                     <div className="banner-product-top-main">
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/Smartphone6-180x180.jpg" />
+                                <img alt="" src={SW} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -19,7 +22,7 @@ const ProductFooter=()=>{
                         </div>
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/Smartphone6-180x180.jpg" />
+                                <img alt="" src={SW2} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -28,7 +31,7 @@ const ProductFooter=()=>{
                         </div>
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/Smartphone6-180x180.jpg" />
+                                <img alt="" src={SW3} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -42,7 +45,7 @@ const ProductFooter=()=>{
                     <div className="banner-product-top-main">
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/GamePad-300x300.jpg" />
+                                <img alt="" src={SW} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -51,7 +54,7 @@ const ProductFooter=()=>{
                         </div>
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/GamePad-300x300.jpg" />
+                                <img alt="" src={SW2} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -60,7 +63,7 @@ const ProductFooter=()=>{
                         </div>
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/GamePad-300x300.jpg" />
+                                <img alt="" src={SW3} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -74,7 +77,7 @@ const ProductFooter=()=>{
                     <div className="banner-product-top-main">
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/TV-300x300.jpg" />
+                                <img alt="" src={SW} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -83,7 +86,7 @@ const ProductFooter=()=>{
                         </div>
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/TV-300x300.jpg" />
+                                <img alt="" src={SW2} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>
@@ -92,7 +95,7 @@ const ProductFooter=()=>{
                         </div>
                         <div className="banner-layout-main">
                             <div className="banner-product-top-main-left">
-                                <img alt="" src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/TV-300x300.jpg" />
+                                <img alt="" src={SW3} />
                             </div>
                             <div className="banner-product-top-main-right">
                                 <p><strong>Tablet Thin EliteBook Revolve 810 G6</strong></p>

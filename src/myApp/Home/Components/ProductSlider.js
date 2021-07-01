@@ -12,7 +12,7 @@ import "swiper/components/pagination/pagination.min.css";
 // import Swiper core and required modules
 import SwiperCore, { Pagination } from "swiper/core";
 import { Paper } from "@material-ui/core";
-
+import SW from './../asset/swbw.jpg'
 // install Swiper modules
 SwiperCore.use([Pagination]);
 
@@ -63,7 +63,7 @@ const ProductSlider = () => {
                       <Link to="/a" className="product-img-home-slider">
                         <img
                           alt=""
-                          src="https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/TV-600x600.jpg"
+                          src={SW}
                         />
                       </Link>
                       <div className="price-product-slider">
