@@ -35,7 +35,19 @@ const MenuRightSlider=()=>{
                   <SwiperSlide className="SwiperSlide">
                     <img
                       alt=""
-                      src="https://cdn.tgdd.vn/2021/06/banner/830-300-830x300-9.png"
+                      src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/dd690x300_XR.png"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide className="SwiperSlide">
+                    <img
+                      alt=""
+                      src="https://cdn.tgdd.vn/2021/06/banner/830-300-830x300-13.png"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide className="SwiperSlide">
+                    <img
+                      alt=""
+                      src="https://cdn.tgdd.vn/2021/06/banner/sn-dh-830-300-830x300.png"
                     />
                   </SwiperSlide>
                 </Swiper>
