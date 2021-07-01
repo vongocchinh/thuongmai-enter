@@ -74,6 +74,29 @@ footer {
     }
 }
 
+.container-ontop{
+    width: 40px;
+    height: 40px;
+    background-color: #F9D300;
+    right: 15px;
+    bottom: 15px;
+    position: fixed;
+    opacity: 0.5;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    transition: ease-in-out  all 0.6s;
+    .ExpandLessIcon{
+        font-size: 30px;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
+
+
 $res_1000: "only screen and (max-width: 1000px)";
 @mixin responsive_1000() {
     @media #{$res_1000} {

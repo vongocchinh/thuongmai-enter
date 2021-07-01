@@ -1,0 +1,165 @@
+.banner-product{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 10px;
+    margin-top: 20px;
+    .banner-product-column{
+        width: 32%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .banner-product-top{
+            width: 100%;
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #F9D300;
+            p{
+                font-size: 20px;
+            }
+
+        }
+        .banner-product-top-main{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            .banner-layout-main{
+                width: 100%;
+                height: 90px;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                margin-top: 15px;
+                justify-content: space-between;
+                .banner-product-top-main-left{
+                    width: 25%;
+                    height: 100%;
+                    img{
+                        width: 80%;
+                        height: 100%;
+                    }
+                }
+                .banner-product-top-main-right{
+                    width: 75%;
+                    height: auto;
+                    p strong{
+                        color: #00417E;
+                    }
+                }
+            }
+           
+        }
+    }
+}
+
+$res_1000: "only screen and (max-width: 1000px)";
+@mixin responsive_1000() {
+    @media #{$res_1000} {
+        @content;
+    }
+}
+@include responsive_1000() {
+    .banner-product{
+        width: 100%;
+        height: auto;
+        display: block;
+        clear: both;
+        height: 400px;
+        .banner-product-column{
+            float: left;
+            width: 49%;
+        }
+        .banner-product-column:nth-child(2){
+            margin-left: 10px;
+        }
+    }
+}
+.clear{
+    clear: both;
+}
+
+
+$res_800: "only screen and (max-width: 800px)";
+@mixin responsive_800() {
+    @media #{$res_800} {
+        @content;
+    }
+}
+@include responsive_800() {
+    .banner-product{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .banner-product-column{
+            width: 60%;
+        }
+    }
+}
+
+
+$res_600: "only screen and (max-width: 600px)";
+@mixin responsive_600() {
+    @media #{$res_600} {
+        @content;
+    }
+}
+@include responsive_600() {
+    .banner-product{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .banner-product-column{
+            width:70%;
+        }
+    }
+}
+
+$res_500: "only screen and (max-width: 500px)";
+@mixin responsive_500() {
+    @media #{$res_500} {
+        @content;
+    }
+}
+@include responsive_500() {
+    .banner-product{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .banner-product-column{
+            width: 80%;
+        }
+    }
+}
+
+$res_400: "only screen and (max-width: 400px)";
+@mixin responsive_400() {
+    @media #{$res_400} {
+        @content;
+    }
+}
+@include responsive_400() {
+    .banner-product{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .banner-product-column{
+            width: 90%;
+        }
+    }
+}

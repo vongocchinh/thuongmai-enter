@@ -6,6 +6,7 @@ import ProductSlider from "./ProductSlider";
 import BannerImg from "./BannerImg";
 import MenuLeft from "./MenuLeft";
 import MenuRightSlider from "./MenuRightSlider";
+import ProductFooter from "./ProductFooter";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
         </div>
       </div>
       <ProductSlider />
+      <ProductFooter />
     </>
   );
 };

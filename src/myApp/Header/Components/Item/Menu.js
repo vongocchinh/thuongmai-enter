@@ -16,7 +16,7 @@ const Menu = () => {
           </NavLink>
 
           <NavLink
-            to="/a"
+            to="/detail"
             activeClassName="active-menu"
             className="menu-item-header"
             href="####"

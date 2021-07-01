@@ -83,3 +83,29 @@ $res_1000: "only screen and (max-width: 1000px)";
         }
     }
 }
+
+
+$res_700: "only screen and (max-width: 700px)";
+@mixin responsive_700() {
+    @media #{$res_700} {
+        @content;
+    }
+}
+@include responsive_700() {
+    .container-news .container-news-layout .container-news-layout-left p {
+        font-size: 16px;
+    }
+}
+
+
+$res_500: "only screen and (max-width: 500px)";
+@mixin responsive_500() {
+    @media #{$res_500} {
+        @content;
+    }
+}
+@include responsive_500() {
+    .container-news .container-news-layout .container-news-layout-left p {
+        font-size: 13px;
+    }
+}

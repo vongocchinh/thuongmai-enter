@@ -1,5 +1,5 @@
 import React from 'react';
-import './news.scss';
+import './style/news.scss';
 import TelegramIcon from '@material-ui/icons/Telegram';
 const Newsletter=()=>{
     return(
@@ -12,7 +12,7 @@ const Newsletter=()=>{
                     </div>
                     <div className="container-news-layout-right">
                         <input  className="input-text" placeholder="Enter your email address" />
-                        <input className="input-submit" value="Sign Up" />
+                        <input type="submit" className="input-submit" value="Sign Up" />
                     </div>
                 </div>
             </div>

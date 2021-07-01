@@ -46,11 +46,15 @@ const ProductSlider = () => {
                 slidesPerView: 4,
                 spaceBetween: 50,
               },
+              1351: {
+                slidesPerView: 5,
+                spaceBetween: 5,
+              },
             }}
           >
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((key) => {
               return (
-                <SwiperSlide className="SwiperSlide-slide">
+                <SwiperSlide key={key} className="SwiperSlide-slide">
                   <Grid className="product-item-home-slide">
                     <Paper className="paper-slider">
                        <p className="product-name-home-slider">

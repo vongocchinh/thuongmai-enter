@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.scss";
+import "./style/styles.scss";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -8,10 +8,14 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import ContactlessIcon from "@material-ui/icons/Contactless";
 import Newsletter from "./Newsleter";
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 const Footer = () => {
   return (
     <>
       <Newsletter />
+      <div className="container-ontop">
+          <ExpandLessIcon className="ExpandLessIcon" />
+      </div>
       <div className="footer">
         <div className="container">
           <div className="footer-container">
