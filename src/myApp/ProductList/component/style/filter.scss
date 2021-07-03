@@ -1,0 +1,101 @@
+.container-filter{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    .container-filter-brand{
+        width: 100%;
+        height: auto;
+        .filter{
+            width: 100%;
+            border-bottom: 1px solid #F9D300;
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+        input[type='submit']{
+            width: 100%;
+            padding: 10px 0px;
+            border: 1px solid #F9D300;
+            background-color: #F9D300;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+        }
+        hr{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        ul{
+            width: 100%;
+            height: auto;
+            p{
+                font-size: 15px;
+                font-weight: 600;
+            }
+            li{
+                list-style-type: none;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                padding: 10px 0px;
+                input{
+                    width: 40px;
+                    cursor: pointer;
+                    vertical-align: middle;
+                    &:hover{
+                        background-color: #F9D300;
+                    }
+                }
+                label{
+                    width: 200px;
+                    position: relative;
+                    display: block;
+                    cursor: pointer;
+                    margin-top: -2px;
+                }
+            }
+            .abel-slide-price{
+                width: 100%;
+            }
+        }
+    }
+}
+
+$res_1000: "only screen and (max-width: 1000px)";
+@mixin responsive_1000() {
+    @media #{$res_1000} {
+        @content;
+    }
+}
+@include responsive_1000() {
+    .container-filter{
+        .container-filter-brand{
+            input[type='submit']{
+                width: 50% ;
+            }
+        }
+    }
+    .slide-price{
+        width: 50%;
+    }
+}
+
+$res_500: "only screen and (max-width: 500px)";
+@mixin responsive_500() {
+    @media #{$res_500} {
+        @content;
+    }
+}
+@include responsive_500() {
+    .container-filter{
+        .container-filter-brand{
+            input[type='submit']{
+                width: 100% ;
+            }
+        }
+    }
+    .slide-price{
+        width: 100%;
+    }
+}

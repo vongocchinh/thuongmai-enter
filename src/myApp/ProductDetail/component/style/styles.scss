@@ -534,7 +534,14 @@ $res_750: "only screen and (max-width: 750px)";
         width: 100%;
         height: auto;
         display: block;
-        float: left;
+        // justify-content: space-between;
+        .container-product-title-item {
+            width: auto;
+            float: left;
+        }
+        .container-product-title-item:nth-child(4){
+            width: auto;
+        }
     }
 }
 
@@ -599,5 +606,11 @@ $res_500: "only screen and (max-width: 500px)";
         margin-top: 50px;
         display: flex;
         flex-direction: column;
+    }
+    .container-product-title {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }

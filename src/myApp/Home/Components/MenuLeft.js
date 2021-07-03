@@ -10,18 +10,18 @@ const MenuLeft=()=>{
         <div className="banner-page-left">
               <div className="banner-page-menu-list">
                 <div className="menu-list-item">
-                  <Link to="/">
-                    <strong>Value of the Day Top 100</strong>
+                  <Link className="menu-list-item-link" to="/">
+                    <>Value of the Day Top 100</>
                   </Link>
                 </div>
                 <div className="menu-list-item">
-                  <Link to="/">
-                    <strong>Accessories Super</strong>
+                  <Link className="menu-list-item-link" to="/">
+                    <>Accessories Super</>
                   </Link>
                 </div>
                 <div className="menu-list-item">
-                  <Link to="/">
-                    <strong>BrandsTrending</strong>
+                  <Link className="menu-list-item-link" to="/">
+                    <>BrandsTrending</>
                   </Link>
                 </div>
                 <div className="menu-list-item menu-list-item-flex">

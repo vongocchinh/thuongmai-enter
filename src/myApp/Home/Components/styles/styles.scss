@@ -27,11 +27,15 @@
                     padding: 10px 5px;
                     border-bottom: 1px solid #dcdcdc;
                     cursor: pointer;
+                    color: black;
                     strong {
                         color: black;
                     }
                     &:hover {
                         background-color: #f5f5f5;
+                    }
+                    .menu-list-item-link{
+                        color: black;
                     }
                 }
                 .menu-list-item-flex {

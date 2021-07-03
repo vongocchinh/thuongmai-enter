@@ -8,12 +8,12 @@ const Newsletter=()=>{
             <div className="container">
                 <div className="container-news-layout">
                     <div className="container-news-layout-left">
-                    <TelegramIcon fontSize="large" /> <p>Sign up to Newsletter ..and receive $20 coupon for first shopping</p>
+                    <TelegramIcon fontSize="large" /> <p>Sign up to Newsletter</p>
                     </div>
-                    <div className="container-news-layout-right">
+                    <form className="container-news-layout-right">
                         <input  className="input-text" placeholder="Enter your email address" />
                         <input type="submit" className="input-submit" value="Sign Up" />
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

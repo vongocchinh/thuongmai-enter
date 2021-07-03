@@ -23,7 +23,7 @@ const MenuRightSlider=()=>{
                   spaceBetween={30}
                   centeredSlides={true}
                   autoplay={{
-                    delay: 2500,
+                    delay: 4500,
                     disableOnInteraction: false,
                   }}
                   pagination={{
@@ -32,7 +32,7 @@ const MenuRightSlider=()=>{
                   }}
                   className="mySwiper"
                 >
-                  <SwiperSlide className="SwiperSlide">
+                  {/* <SwiperSlide className="SwiperSlide">
                     <img
                       alt=""
                       src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/dd690x300_XR.png"
@@ -49,7 +49,7 @@ const MenuRightSlider=()=>{
                       alt=""
                       src="https://cdn.tgdd.vn/2021/06/banner/sn-dh-830-300-830x300.png"
                     />
-                  </SwiperSlide>
+                  </SwiperSlide> */}
                 </Swiper>
               </div>
             </div>
