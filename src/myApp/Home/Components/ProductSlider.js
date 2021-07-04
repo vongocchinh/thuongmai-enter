@@ -67,9 +67,9 @@ const ProductSlider = () => {
                         />
                       </Link>
                       <div className="price-product-slider">
-                        <p>$ 1.900.00</p>
+                        <p>$1.900.00</p>
                         <p>
-                          <del>$ 2.900.00</del>
+                          <del>$2.900.00</del>
                         </p>
                       </div>
                     </Paper>
