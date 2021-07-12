@@ -134,10 +134,10 @@ $border: 1px solid black;
             align-items: center;
             flex-direction: row;
             cursor: pointer;
-            div:nth-child(2) {
+            .header-option-item:nth-child(2) {
                 display: none;
             }
-            div {
+            .header-option-item {
                 width: 33%;
                 height: 25px;
                 .size-icon {
@@ -288,7 +288,7 @@ $res_850: "only screen and (max-width: 850px)";
                 margin-top: 10px;
                 margin-bottom: 10px;
                 width: 30%;
-                div:nth-child(2) {
+                .header-option-item:nth-child(2) {
                     display: block;
                 }
             }
@@ -345,7 +345,7 @@ $res_500: "only screen and (max-width: 500px)";
             flex-direction: column;
             .header-option {
                 width: 70%;
-                div {
+                .header-option-item {
                     text-align: center;
                 }
             }

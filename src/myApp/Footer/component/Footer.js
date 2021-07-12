@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import "./style/styles.scss";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -8,14 +9,43 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import ContactlessIcon from "@material-ui/icons/Contactless";
 import Newsletter from "./Newsleter";
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 const Footer = () => {
+  const [onTop, setOnTop] = useState(false);
+  const handleOnTop = () => {
+    window.scrollTo({top:0,behavior:"smooth"})
+  };
+  useEffect(() => {
+      window.addEventListener("scroll",()=>{
+        handleAutoButton();
+      })
+    return () => {
+      
+    }
+  }, [])
+  const handleAutoButton = () => {
+    if (window.pageYOffset > 300) {
+      setOnTop(true);
+    } else {
+      setOnTop(false);
+    }
+  };
+  const ComponentOnTop = (onTop) => {
+
+    if (onTop) {
+      return (
+        <div onClick={handleOnTop} className="container-ontop">
+          <ExpandLessIcon className="ExpandLessIcon" />
+        </div>
+      );
+    } else {
+      return <></>;
+    }
+  };
   return (
     <>
       <Newsletter />
-      <div className="container-ontop">
-          <ExpandLessIcon className="ExpandLessIcon" />
-      </div>
+      {ComponentOnTop(onTop)}
       <div className="footer">
         <div className="container">
           <div className="footer-container">

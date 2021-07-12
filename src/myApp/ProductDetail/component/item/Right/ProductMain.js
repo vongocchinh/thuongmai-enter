@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 import Description from "./TabMenu/Description";
 import ReviewForm from "./TabMenu/ReviewForm";
 import Reviews from "./TabMenu/Reviewss";
-
+import Product from './Product';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -106,6 +106,9 @@ const ProductMain = () => {
             <Reviews />
           </TabPanel>
         </SwipeableViews>
+      </div>
+      <div>
+        <Product />
       </div>
     </div>
   );

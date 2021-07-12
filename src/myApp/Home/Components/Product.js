@@ -81,6 +81,7 @@ const Product = () => {
               </div>
               <div>
                 <h1>$99.00</h1>
+                
               </div>
             </div>
           </div>
@@ -122,7 +123,9 @@ const Product = () => {
                           <Paper className="paper">
                             <div className="brand-home">
                               <p className="brand-name-home">Audio Speakers </p>
-                              <span className="option-sale"><span>0%</span> <span>-10%</span></span>
+                              <span className="option-sale">
+                                <span>0%</span> <span>-10%</span>
+                              </span>
                             </div>
 
                             <p className="product-name-home">
@@ -179,6 +182,16 @@ const Product = () => {
                                 <del>$2.900.00</del>
                               </p>
                             </div>
+                            <div className="star-product-home">
+                              <StarRatings
+                                rating={2}
+                                starDimension="16px"
+                                starSpacing="0px"
+                                className="StarRatings-product"
+                                starRatedColor="#FED207"
+                              />
+                              <span>(12)</span>
+                            </div>
                           </Paper>
                         </Grid>
                       ))}
@@ -205,6 +218,16 @@ const Product = () => {
                               <p>
                                 <del>$2.900.00</del>
                               </p>
+                            </div>
+                            <div className="star-product-home">
+                              <StarRatings
+                                rating={2}
+                                starDimension="16px"
+                                starSpacing="0px"
+                                className="StarRatings-product"
+                                starRatedColor="#FED207"
+                              />
+                              <span>(12)</span>
                             </div>
                           </Paper>
                         </Grid>

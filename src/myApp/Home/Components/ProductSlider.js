@@ -13,6 +13,7 @@ import "swiper/components/pagination/pagination.min.css";
 import SwiperCore, { Pagination } from "swiper/core";
 import { Paper } from "@material-ui/core";
 import SW from './../asset/swbw.jpg'
+import  StarRatings from 'react-star-ratings';
 // install Swiper modules
 SwiperCore.use([Pagination]);
 
@@ -72,6 +73,16 @@ const ProductSlider = () => {
                           <del>$2.900.00</del>
                         </p>
                       </div>
+                      <div className="star-product-home">
+                              <StarRatings
+                                rating={2}
+                                starDimension="16px"
+                                starSpacing="0px"
+                                className="StarRatings-product"
+                                starRatedColor="#FED207"
+                              />
+                              <span>(12)</span>
+                            </div>
                     </Paper>
                   </Grid>
                 </SwiperSlide>

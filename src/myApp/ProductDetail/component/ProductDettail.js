@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect} from "react";
 import "./style/styles.scss";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ProductLef from './item/Left/ProductLeft';
@@ -9,7 +10,9 @@ import ProductMain from "./item/Right/ProductMain";
 
 const ProductDetail = () => {
 
-
+  useEffect(() => {
+    window.scrollTo({top:0,behavior:"auto"});
+  }, [1])
   return (
     <>
       <div className="container">

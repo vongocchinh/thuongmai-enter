@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Pagination } from "@material-ui/lab";
 import Filter from "./Item/Filter";
+import StarRatings from "react-star-ratings";
 const ProductList = () => {
   return (
     <>
@@ -92,6 +93,16 @@ const ProductList = () => {
                                 <del>$2.900.00</del>
                               </p>
                               <AddShoppingCartIcon className="AddShoppingCartIcon" />
+                            </div>
+                            <div className="star-product-home">
+                              <StarRatings
+                                rating={2}
+                                starDimension="16px"
+                                starSpacing="0px"
+                                className="StarRatings-product"
+                                starRatedColor="#FED207"
+                              />
+                              <span>(12)</span>
                             </div>
                           </Paper>
                         </Grid>
