@@ -3,29 +3,30 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
+import { Link } from "react-router-dom";
 const HeaderTop = () => {
   return (
     <>
       <div className="header-container-top-layout">
         <div className="header-container-top-left">
-          <div>Welcome to Worldwide Electronics Store</div>
+          <div className="div">Welcome to Worldwide Electronics Store</div>
         </div>
         <div className="header-container-top-right">
-          <div>
+          <Link to="/map" className="div">
             <LocationOnIcon className="size-icon-header" /> Store Locator
-          </div>
+          </Link>
           |
-          <div>
+          <Link to="/track" className="div">
             <LocalShippingIcon className="size-icon-header" /> Track Your Order
-          </div>
+          </Link>
           |
-          <div>
+          <Link to="/list" className="div">
             <StorefrontIcon className="size-icon-header" /> Shop
-          </div>
+          </Link>
           |
-          <div>
+          <Link to="/account" className="div">
             <AccountCircleIcon className="size-icon-header" /> Account
-          </div>
+          </Link>
         </div>
       </div>
     </>

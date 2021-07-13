@@ -33,7 +33,7 @@ $border: 1px solid black;
             align-items: center;
             flex-direction: row;
             cursor: pointer;
-            div {
+            .div {
                 width: auto;
                 height: 100%;
                 display: flex;
@@ -42,6 +42,7 @@ $border: 1px solid black;
                 margin-left: 15px;
                 margin-right: 15px;
                 font-size: 13px;
+                color: black;
             }
         }
         .size-icon-header {

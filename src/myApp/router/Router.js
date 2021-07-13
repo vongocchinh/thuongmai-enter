@@ -6,6 +6,10 @@ import ProductList from './../ProductList/Container/ProductList';
 import Login from './../Account/container/Login';
 import Register from './../Account/container/Register';
 import Cart from './../Cart/container/Cart';
+import Map from './../Map/container/Map';
+import TrackOrder from './../TrackOrder/container/TrackOrder';
+import Account from './../Account/container/Account';
+
 
 const Router=()=>{
     return (
@@ -16,6 +20,9 @@ const Router=()=>{
             <Route  path="/detail" component={ProductDetail} ></Route>
             <Route  path="/list" component={ProductList} ></Route>
             <Route  path="/cart" component={Cart} ></Route>
+            <Route  path="/map" component={Map} ></Route>
+            <Route  path="/account" component={Account} ></Route>
+            <Route  path="/track" component={TrackOrder} ></Route>
         </Switch>
     )
 }

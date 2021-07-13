@@ -1,0 +1,86 @@
+.container-track{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    h3{
+        text-align: center;
+        font-size: 34px;
+        font-weight: 550;
+    }
+    p{
+        text-align: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 3%;
+        color: #8E878F;
+    }
+    .container-track-stepper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 30px;
+        padding: 0px 20px;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+
+$res_800: "only screen and (max-width: 800px)";
+@mixin responsive_800() {
+    @media #{$res_800} {
+        @content;
+    }
+}
+@include responsive_800() {
+    .container-track{
+        .container-track-stepper{
+            padding: 0px 0px;
+        }
+        p{
+            padding: 0px 0px;
+        }
+    }
+}
+
+.container-tracker-button{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button{
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #F9D300;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+        color: black;
+        align-items: center;
+    }
+}
+
+
+
+$res_700: "only screen and (max-width: 700px)";
+@mixin responsive_700() {
+    @media #{$res_700} {
+        @content;
+    }
+}
+@include responsive_700() {
+    .container-track{
+        .container-track-stepper{
+            flex-direction: column;
+        }
+    }
+}

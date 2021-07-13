@@ -189,4 +189,37 @@ $res_650px: "only screen and (max-width: 650px)";
             }
         }
     }
+    .container-checkout-here{
+        position: fixed;
+        bottom: 0;
+        margin-top: 0px;
+        margin-left: -4%;
+        margin-right: 0%;
+        width: 100%;
+        background-color: #fed700;
+        z-index: 999;
+        .container-checkout-here-item {
+            width: 100%;
+            padding: 7px 15px; 
+            .Link {
+                width: 120px;
+                padding: 7px;
+                background-color: #eaeaea;
+                color: black;
+            }
+        }
+    }
+}
+
+
+$res_450px: "only screen and (max-width: 450px)";
+@mixin responsive_450px() {
+    @media #{$res_450px} {
+        @content;
+    }
+}
+@include responsive_450px() {
+    .container-checkout-here{
+        margin-left: -2%;
+    }
 }

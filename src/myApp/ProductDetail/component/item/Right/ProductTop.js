@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import StarRatings from "react-star-ratings";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import SAMSUNG from "./../../../asset/sw.jpg";
-
+// import ReactImageZoom from "react-image-zoom";
 
 const arr = [
   {
@@ -34,7 +34,7 @@ const ProductTop = () => {
     html = arr.map((value, key) => {
       return (
         <img
-        className="img-click"
+          className="img-click"
           key={key}
           onClick={() => {
             setImg(value.value);
@@ -46,26 +46,34 @@ const ProductTop = () => {
     });
     return html;
   };
-  const activeOnclick=()=>{
-    const img=document.querySelectorAll(".img-click");
-    img.forEach(res=>res.addEventListener("click",()=>{
-      var j=0;
-      while(j<img.length){
-        img[j].className="img-click";
-        j++;
-      }
-      res.className="img-click active";
-    }))
-  }
+  const activeOnclick = () => {
+    const img = document.querySelectorAll(".img-click");
+    img.forEach((res) =>
+      res.addEventListener("click", () => {
+        var j = 0;
+        while (j < img.length) {
+          img[j].className = "img-click";
+          j++;
+        }
+        res.className = "img-click active";
+      })
+    );
+  };
   activeOnclick();
   useEffect(() => {
     setImg(arr[0].value);
   }, [1]);
+
+
+
   return (
     <div className="product-detail-right-img">
       <div className="product-detail-right-img-left">
-        <img alt="" src={Img} />
-        
+        <figure  className="img-main" >
+            <img alt="" src={Img}  />
+        </figure>
+
+        {/* <ReactImageZoom {...props} /> */}
         <div className="div-con-item-img">{showImg(arr)}</div>
       </div>
       <div className="product-detail-right-img-item">

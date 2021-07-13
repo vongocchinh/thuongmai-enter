@@ -151,9 +151,14 @@
                 align-items: center;
                 flex-direction: column;
                 margin-top: 20px;
-                img {
+                .img-main{
                     width: 255px;
                     height: 270px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
                 .heart{
                     width: 100%;
@@ -196,11 +201,11 @@
                         cursor: pointer;
                         margin: 10px 0px;
                         padding:10px 0px;
-                        border: 1.5px solid #00417e;
-                        border-radius: 5px;
+                        border: 1.5px solid #E5E3F9;
+                        border-radius: 10px;
                     }
                     .img-click.active{
-                        border: 2px solid #0021DB;
+                        border: 1px solid #0021DB;
                     }
                 }
             }
