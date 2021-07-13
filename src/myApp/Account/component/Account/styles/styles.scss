@@ -31,6 +31,9 @@
                     width: 100%;
                     height: 150px;
                     border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
                 }
             }
             .container-account-img-item:nth-child(1){

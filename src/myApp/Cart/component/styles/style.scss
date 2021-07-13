@@ -3,8 +3,10 @@
     margin-left: 5%;
     margin-right: 5%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px;
+    box-shadow: 0px 0px 2px 3px #f1f3fd;
+    border-radius: 10px;
     .table {
         width: 100%;
         height: auto;
@@ -21,6 +23,9 @@
             &:hover .name-hover {
                 color: #6148f0;
             }
+        }
+        tr:last-child {
+            border-bottom: none;
         }
         td {
             display: flex;
@@ -92,6 +97,10 @@
     margin-top: 20px;
     margin-left: 5%;
     margin-right: 10%;
+    box-shadow: 0px 0px 2px 3px #f1f3fd;
+    padding: 10px;
+    border-radius: 10px;
+
     .container-checkout-here-item {
         display: flex;
         justify-content: space-between;
@@ -104,7 +113,7 @@
         span {
             width: auto;
             height: auto;
-            font-size: 16px;
+            font-size: 14px;
         }
         span:nth-child(1) {
             font-weight: 600;
@@ -189,7 +198,7 @@ $res_650px: "only screen and (max-width: 650px)";
             }
         }
     }
-    .container-checkout-here{
+    .container-checkout-here {
         position: fixed;
         bottom: 0;
         margin-top: 0px;
@@ -200,7 +209,7 @@ $res_650px: "only screen and (max-width: 650px)";
         z-index: 999;
         .container-checkout-here-item {
             width: 100%;
-            padding: 7px 15px; 
+            padding: 7px 15px;
             .Link {
                 width: 120px;
                 padding: 7px;
@@ -211,7 +220,6 @@ $res_650px: "only screen and (max-width: 650px)";
     }
 }
 
-
 $res_450px: "only screen and (max-width: 450px)";
 @mixin responsive_450px() {
     @media #{$res_450px} {
@@ -219,7 +227,7 @@ $res_450px: "only screen and (max-width: 450px)";
     }
 }
 @include responsive_450px() {
-    .container-checkout-here{
+    .container-checkout-here {
         margin-left: -2%;
     }
 }
