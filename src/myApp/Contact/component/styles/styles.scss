@@ -1,0 +1,82 @@
+.container-contact{
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .name{
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    form{
+        width: 500px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        span{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            input{
+                width: 48%;
+            }
+        }
+        p{
+            font-size: 14px;
+            color: #426DE5;
+            margin-top: 20px;
+        }
+        textarea{
+            width: 100%;
+            height: 160px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            padding: 10px;
+            outline: none;
+        }
+        input::placeholder{
+            color: #8E858F;
+        }
+        input{
+            height: 35px;
+            margin-bottom: 10px;
+            outline: none;
+            width: 100%;
+            border: 1px solid #8E858F;
+            padding-left: 15px;
+            border-radius: 2px;
+        }
+        input[type="submit"]{
+            background-color: #F9D300;
+            border: 1px solid #F9D300;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+        }
+    }
+
+}
+
+
+$res_600: "only screen and (max-width: 600px)";
+@mixin responsive_600() {
+    @media #{$res_600} {
+        @content;
+    }
+}
+@include responsive_600() {
+    .container-contact{
+        form{
+            width: auto;
+            textarea{
+                height: 100px;
+            }
+        }
+    }
+}

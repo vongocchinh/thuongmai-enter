@@ -61,7 +61,7 @@ const ProductSlider = () => {
                        <p className="product-name-home-slider">
                         Wireless Audio System Multiroom 360
                       </p>
-                      <Link to="/a" className="product-img-home-slider">
+                      <Link to="/detail" className="product-img-home-slider">
                         <img
                           alt=""
                           src={SW}

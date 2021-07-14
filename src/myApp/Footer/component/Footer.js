@@ -8,7 +8,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import ContactlessIcon from "@material-ui/icons/Contactless";
-import Newsletter from "./Newsleter";
+// import Newsletter from "./Newsleter";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 const Footer = () => {
   const [onTop, setOnTop] = useState(false);
@@ -44,7 +44,7 @@ const Footer = () => {
   };
   return (
     <>
-      <Newsletter />
+      {/* <Newsletter /> */}
       {ComponentOnTop(onTop)}
       <div className="footer">
         <div className="container">
@@ -65,6 +65,12 @@ const Footer = () => {
                 <LinkedInIcon className="FacebookIcon" />{" "}
                 <YouTubeIcon className="FacebookIcon" />{" "}
                 <ContactlessIcon className="FacebookIcon" />
+              </div>
+              <div className="footer-container-left-4">
+                    <form className="container-news-layout-right">
+                        <input  className="input-text" placeholder="Enter your email address" />
+                        <input type="submit" className="input-submit" value="Save" />
+                    </form>
               </div>
             </div>
             <div className="footer-container-right">

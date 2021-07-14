@@ -34,7 +34,7 @@ const Menu = () => {
           </NavLink>
 
           <NavLink
-            to="/c"
+            to="/account"
             activeClassName="active-menu"
             className="menu-item-header"
             href="####"
@@ -43,7 +43,7 @@ const Menu = () => {
           </NavLink>
 
           <NavLink
-            to="/d"
+            to="/card"
             activeClassName="active-menu"
             className="menu-item-header"
             href="####"
@@ -52,7 +52,7 @@ const Menu = () => {
           </NavLink>
 
           <NavLink
-            to="/e"
+            to="/contact"
             activeClassName="active-menu"
             className="menu-item-header"
             href="####"

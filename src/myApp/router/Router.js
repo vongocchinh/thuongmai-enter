@@ -9,7 +9,9 @@ import Cart from './../Cart/container/Cart';
 import Map from './../Map/container/Map';
 import TrackOrder from './../TrackOrder/container/TrackOrder';
 import Account from './../Account/container/Account';
-
+import Contact from './../Contact/container/Contact';
+import Card from './../Card/container/Card';
+import CardDetail from './../Card/container/CardDetail';
 
 const Router=()=>{
     return (
@@ -23,6 +25,9 @@ const Router=()=>{
             <Route  path="/map" component={Map} ></Route>
             <Route  path="/account" component={Account} ></Route>
             <Route  path="/track" component={TrackOrder} ></Route>
+            <Route  path="/card" component={Card} ></Route>
+            <Route  path="/cardDetail" component={CardDetail} ></Route>
+            <Route  path="/contact" component={Contact} ></Route>
         </Switch>
     )
 }

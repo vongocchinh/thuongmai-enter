@@ -1,5 +1,5 @@
 /* eslint-disable no-unreachable */
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import "./styles/styles.scss";
 import EditIcon from "@material-ui/icons/Edit";
 import Button from "@material-ui/core/Button";
@@ -11,6 +11,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import  ArrowForwardIosIcon  from '@material-ui/icons/ArrowForwardIos';
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -30,8 +31,9 @@ const Account = () => {
   const [open, setOpen] = React.useState(false);
   const [dateType, setDateType] = React.useState(false);
   const [showInput, setInput] = React.useState(null);
-
+  const wrapper = React.createRef();
   const handleClickOpen = (e) => {
+
     if (e === "1") {
       setInput(1);
     }
@@ -205,9 +207,11 @@ const Account = () => {
         return "Form Security"
     }
   };
-  return (
-    <>
+
+  const showForm=(open,wrapper)=>{
+    return (
       <Dialog
+      ref={wrapper}
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
@@ -225,6 +229,22 @@ const Account = () => {
           </Button>
         </DialogActions>
       </Dialog>
+    )
+  }
+  return (
+    <>
+      {showForm(open,wrapper)}
+      <div className="container">
+        <div className="container-product-title">
+          <div className="container-product-title-item">
+            <div>Home</div> <ArrowForwardIosIcon className="icon-size" />
+          </div>
+          <div className="container-product-title-item">
+            <div>Account</div>{" "}
+            <ArrowForwardIosIcon className="icon-size" />
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="container-account">
           <div className="container-account-left">
