@@ -1,5 +1,5 @@
 /* eslint-disable no-unreachable */
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./styles/styles.scss";
 import EditIcon from "@material-ui/icons/Edit";
 import Button from "@material-ui/core/Button";
@@ -11,7 +11,9 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import  ArrowForwardIosIcon  from '@material-ui/icons/ArrowForwardIos';
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import { useForm, Controller } from "react-hook-form";
+import Select from "react-select";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -26,14 +28,13 @@ const Img =
   "https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-600x600.jpg";
 const Account = () => {
   const classes = useStyles();
-
+  const { handleSubmit, control, reset } = useForm();
   const [imgUser, setImgUser] = useState(null);
   const [open, setOpen] = React.useState(false);
-  const [dateType, setDateType] = React.useState(false);
+  const [dateType, setDateType] = React.useState(true);
   const [showInput, setInput] = React.useState(null);
   const wrapper = React.createRef();
   const handleClickOpen = (e) => {
-
     if (e === "1") {
       setInput(1);
     }
@@ -64,47 +65,84 @@ const Account = () => {
     if (e === 1) {
       return (
         <>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Name"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="userName"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Name"
+                type="text"
+                fullWidth
+                style={{ width: "100%" }}
+                {...field}
+              />
+            )}
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Date Birthday"
-            type={dateType ? "text" : "date"}
+          <Controller
+            name="date"
+            control={control}
+            defaultValue={""}
             onFocus={() => {
-              setDateType(false);
-            }}
-            onBlur={() => {
               setDateType(true);
             }}
-            fullWidth
-            style={{ width: "100%" }}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                onFocus={() => {
+                  setDateType(true);
+                }}
+                label=""
+                type={dateType ? "date" : "text"}
+                onBlur={() => {
+                  setDateType(false);
+                }}
+                fullWidth
+                style={{ width: "100%", marginTop: 20 }}
+                {...field}
+              />
+            )}
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Gender"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="address"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Address"
+                type="text"
+                fullWidth
+                style={{ width: "100%", marginBottom: 20 }}
+                {...field}
+              />
+            )}
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Address"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="gender"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <Select
+                style={{ width: "100%", marginTop: 20 }}
+                {...field}
+                options={[
+                  { value: "1", label: "Male" },
+                  { value: "0", label: "Female" },
+                ]}
+              />
+            )}
           />
         </>
       );
@@ -112,32 +150,59 @@ const Account = () => {
     if (e === 2) {
       return (
         <>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Language"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="language"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Language"
+                type="text"
+                fullWidth
+                style={{ width: "100%" }}
+                {...field}
+              />
+            )}
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Time zone"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="time_zone"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Time zone"
+                type="text"
+                fullWidth
+                style={{ width: "100%" }}
+                {...field}
+              />
+            )}
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Account status"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="account_status"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Account status"
+                type="text"
+                fullWidth
+                style={{ width: "100%" }}
+                {...field}
+              />
+            )}
           />
         </>
       );
@@ -145,14 +210,23 @@ const Account = () => {
     if (e === 3) {
       return (
         <>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="email"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Email"
+                type="text"
+                fullWidth
+                style={{ width: "100%" }}
+              />
+            )}
           />
         </>
       );
@@ -160,14 +234,23 @@ const Account = () => {
     if (e === 4) {
       return (
         <>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Phone"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="phone"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Phone"
+                type="text"
+                fullWidth
+                style={{ width: "100%" }}
+              />
+            )}
           />
         </>
       );
@@ -175,14 +258,23 @@ const Account = () => {
     if (e === 5) {
       return (
         <>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Password"
-            type="text"
-            fullWidth
-            style={{ width: "100%" }}
+          <Controller
+            name="password"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Password"
+                type="text"
+                fullWidth
+                style={{ width: "100%" }}
+              />
+            )}
           />
         </>
       );
@@ -190,58 +282,63 @@ const Account = () => {
   };
 
   const showName = (e) => {
-
-    if(e===1){
-        return "Form Personal Detail"
+    if (e === 1) {
+      return "Form Personal Detail";
     }
-    if(e===2){
-        return "Form Account Setting"
+    if (e === 2) {
+      return "Form Account Setting";
     }
-    if(e===3){
-        return "Form Email Address"
+    if (e === 3) {
+      return "Form Email Address";
     }
-    if(e===4){
-        return "Form Phone Address"
+    if (e === 4) {
+      return "Form Phone Address";
     }
-    if(e===5){
-        return "Form Security"
+    if (e === 5) {
+      return "Form Security";
     }
   };
-
-  const showForm=(open,wrapper)=>{
+  const onSubmit = (data) => {
+    reset();
+    console.log(data);
+  };
+  const showForm = (open, wrapper) => {
     return (
       <Dialog
-      ref={wrapper}
+        ref={wrapper}
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">{showName(showInput)}</DialogTitle>
-        <DialogContent className="DialogContent">
-          {showInputModel(showInput)}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Save
-          </Button>
-        </DialogActions>
+        <form style={{ height: "auto" }} onSubmit={handleSubmit(onSubmit)}>
+          <DialogTitle id="form-dialog-title">
+            {showName(showInput)}
+          </DialogTitle>
+          <DialogContent className="DialogContent">
+            {showInputModel(showInput)}
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Cancel
+            </Button>
+            <Button type="submit" onClick={handleClose} color="primary">
+              Save
+            </Button>
+          </DialogActions>
+        </form>
       </Dialog>
-    )
-  }
+    );
+  };
   return (
     <>
-      {showForm(open,wrapper)}
+      {showForm(open, wrapper)}
       <div className="container">
         <div className="container-product-title">
           <div className="container-product-title-item">
             <div>Home</div> <ArrowForwardIosIcon className="icon-size" />
           </div>
           <div className="container-product-title-item">
-            <div>Account</div>{" "}
-            <ArrowForwardIosIcon className="icon-size" />
+            <div>Account</div> <ArrowForwardIosIcon className="icon-size" />
           </div>
         </div>
       </div>

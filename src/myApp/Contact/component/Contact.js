@@ -1,7 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
 import "./styles/styles.scss";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 const Contact = () => {
+  const [input, setInput] = useState({});
+  const onChange=(e)=>{
+    var inputData={...input,[e.target.name]:e.target.value}
+    setInput(inputData);
+  }
+
+  const onSubmit=(e)=>{
+    e.preventDefault();
+    console.log(input);
+    setInput({});
+    e.target.reset();
+  }
+  
   return (
     <>
       <div className="container">
@@ -18,13 +31,13 @@ const Contact = () => {
         <div className="container-contact">
           <p className="name">Contact Us</p>
           
-          <form>
+          <form onSubmit={onSubmit} >
             <span>
-            <input type="text" name="" value="" placeholder="Name" />
-            <input type="text" name="" value="" placeholder="Phone" />
+            <input onChange={onChange} type="text" name="name"  placeholder="Name" />
+            <input onChange={onChange} type="text" name="phone"  placeholder="Phone" />
             </span>
-            <input type="text" name="" value="" placeholder="Email" />
-            <textarea rows="" cols=""></textarea>
+            <input onChange={onChange} type="text" name="email"  placeholder="Email" />
+            <textarea onChange={onChange} name="message" rows="" cols="message"></textarea>
             <input type="submit" name="" value="Save" />
             <p>
             It is a long established fact that a reader will be distracted by

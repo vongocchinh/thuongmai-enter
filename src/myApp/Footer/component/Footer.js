@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import "./style/styles.scss";
@@ -10,19 +11,25 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import ContactlessIcon from "@material-ui/icons/Contactless";
 // import Newsletter from "./Newsleter";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import { useForm } from "react-hook-form";
+
 const Footer = () => {
   const [onTop, setOnTop] = useState(false);
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = useForm();
   const handleOnTop = () => {
-    window.scrollTo({top:0,behavior:"smooth"})
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   useEffect(() => {
-      window.addEventListener("scroll",()=>{
-        handleAutoButton();
-      })
-    return () => {
-      
-    }
-  }, [])
+    window.addEventListener("scroll", () => {
+      handleAutoButton();
+    });
+    return () => {};
+  }, []);
   const handleAutoButton = () => {
     if (window.pageYOffset > 300) {
       setOnTop(true);
@@ -31,7 +38,6 @@ const Footer = () => {
     }
   };
   const ComponentOnTop = (onTop) => {
-
     if (onTop) {
       return (
         <div onClick={handleOnTop} className="container-ontop">
@@ -41,6 +47,11 @@ const Footer = () => {
     } else {
       return <></>;
     }
+  };
+
+  const onSubmit = (e) => {
+    console.log(e);
+    reset();
   };
   return (
     <>
@@ -67,10 +78,22 @@ const Footer = () => {
                 <ContactlessIcon className="FacebookIcon" />
               </div>
               <div className="footer-container-left-4">
-                    <form className="container-news-layout-right">
-                        <input  className="input-text" placeholder="Enter your email address" />
-                        <input type="submit" className="input-submit" value="Save" />
-                    </form>
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="container-news-layout-right"
+                >
+                  <input
+                    {...register("email", {
+                      required: true,
+                      pattern:
+                        /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+                    })}
+                    className={errors.email?"input-text error":"input-text"}
+                    placeholder="Enter your email address"
+                  />
+
+                  <input type="submit" className="input-submit" value="Save" />
+                </form>
               </div>
             </div>
             <div className="footer-container-right">

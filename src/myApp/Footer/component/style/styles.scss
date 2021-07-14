@@ -51,6 +51,8 @@
             height: 70px;
             display: flex;
             justify-content: flex-start;
+            flex-direction: column;
+
         }
     }
     .footer-container-right {
@@ -251,6 +253,10 @@ $res_500: "only screen and (max-width: 500px)";
     border: none;
     border: 1px solid #a0a0a0;
     padding-left: 20px;
+}
+
+.input-text.errors {
+    border: 1px solid red;
 }
 .input-submit {
     width: 50px;

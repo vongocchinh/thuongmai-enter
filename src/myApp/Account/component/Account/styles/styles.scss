@@ -139,6 +139,7 @@
 
 .DialogContent{
     width: 500px;
+    height: auto;
 }
 
 $res_750: "only screen and (max-width: 750px)";
@@ -162,6 +163,7 @@ $res_750: "only screen and (max-width: 750px)";
     }
     .DialogContent{
         width: auto;
+        
     }
 }
 
