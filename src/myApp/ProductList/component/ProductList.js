@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import MenuLeft from "./../../ProductDetail/component/item/Left/Menu";
 import ProductLeft from "./../../ProductDetail/component/item/Left/ProductLeft";
@@ -11,7 +12,18 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Pagination } from "@material-ui/lab";
 import Filter from "./Item/Filter";
 import StarRatings from "react-star-ratings";
+import Select from "react-select";
 const ProductList = () => {
+  const [countSelect, setCountSelect] = useState(0);
+  useEffect(() => {
+    setCountSelect(150);
+  });
+  const options = [
+    { value: "1", label: "Showing 1–15 of " + countSelect + " results" },
+    { value: "2", label: "Showing 1–15 of " + countSelect + " results" },
+    { value: "3", label: "Showing 1–15 of " + countSelect + " results" },
+    { value: "4", label: "Showing 1–15 of " + countSelect + " results" },
+  ];
   return (
     <>
       <div className="container">
@@ -51,18 +63,17 @@ const ProductList = () => {
                 <label>Showing 1–15 of 20 results</label>
               </div>
               <div className="container-product-list-menu">
-                <select>
-                  <option>Showing 1–15 of 20 results</option>
-                  <option>Showing 1–15 of 20 results</option>
-                  <option>Showing 1–15 of 20 results</option>
-                  <option>Showing 1–15 of 20 results</option>
-                </select>
-                <select>
-                  <option>Show 15</option>
-                  <option>Show 15</option>
-                  <option>Show 15</option>
-                  <option>Show 15</option>
-                </select>
+                <Select className="select-option" options={options}></Select>
+                <Select
+                  className="select-option-right"
+                  defaultValue={15}
+                  options={[
+                    { value: 15, label: "show 15" },
+                    { value: 25, label: "show 15" },
+                    { value: 55, label: "show 15" },
+                    { value: 85, label: "show 15" },
+                  ]}
+                ></Select>
               </div>
               <div className="container-product-list-item">
                 <Grid item xs={12}>

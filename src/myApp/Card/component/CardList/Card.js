@@ -3,7 +3,7 @@ import "./styles/styles.scss";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { Link } from "react-router-dom";
 import TextsmsIcon from "@material-ui/icons/Textsms";
-
+import LazyLoad from "react-lazyload";
 var arr = [
   "https://demo2.chethemes.com/electro/wp-content/uploads/2016/02/1-1-e1457115978382.jpg",
   "https://demo2.chethemes.com/electro/wp-content/uploads/2016/03/8-e1457115718213.jpg",
@@ -43,7 +43,9 @@ const Card = () => {
               return (
                 <>
                   <div key={key} className="container-card-left-item">
-                    <img alt="" src={value} />
+                    <LazyLoad width="100%" height={400}>
+                      <img alt="" src={value} />
+                    </LazyLoad>
                     <p className="title-name">
                       HomeDesign Robot Wars – Post with Gallery
                     </p>
@@ -57,7 +59,7 @@ const Card = () => {
                       Quisque id sodales libero. In nec enim nisi, in ultricies
                       quam. Sed lacinia feugiat velit, cursus molestie lectus
                     </p>
-                    <div className="option-item" >
+                    <div className="option-item">
                       <Link className="read-more" to="/cardDetail">
                         Read More
                       </Link>{" "}

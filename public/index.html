@@ -1,45 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <title>React App</title>
+</head>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+<script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script>
+
+  if (address_2 = localStorage.getItem('address_2_saved')) {
+    $('select[name="calc_shipping_district"] option').each(function () {
+      if ($(this).text() == address_2) {
+        $(this).attr('selected', '')
+      }
+    })
+    $('input.billing_address_2').attr('value', address_2)
+  }
+  if (district = localStorage.getItem('district')) {
+    $('select[name="calc_shipping_district"]').html(district)
+    $('select[name="calc_shipping_district"]').on('change', function () {
+      var target = $(this).children('option:selected')
+      target.attr('selected', '')
+      $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+      address_2 = target.text()
+      $('input.billing_address_2').attr('value', address_2)
+      district = $('select[name="calc_shipping_district"]').html()
+      localStorage.setItem('district', district)
+      localStorage.setItem('address_2_saved', address_2)
+    })
+  }
+  $('select[name="calc_shipping_provinces"]').each(function () {
+    var $this = $(this),
+      stc = ''
+    c.forEach(function (i, e) {
+      e += +1
+      stc += '<option value=' + e + '>' + i + '</option>'
+      $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+      if (address_1 = localStorage.getItem('address_1_saved')) {
+        $('select[name="calc_shipping_provinces"] option').each(function () {
+          if ($(this).text() == address_1) {
+            $(this).attr('selected', '')
+          }
+        })
+        $('input.billing_address_1').attr('value', address_1)
+      }
+      $this.on('change', function (i) {
+        i = $this.children('option:selected').index() - 1
+        var str = '',
+          r = $this.val()
+        if (r != '') {
+          arr[i].forEach(function (el) {
+            str += '<option value="' + el + '">' + el + '</option>'
+            $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>' + str)
+          })
+          var address_1 = $this.children('option:selected').text()
+          var district = $('select[name="calc_shipping_district"]').html()
+          localStorage.setItem('address_1_saved', address_1)
+          localStorage.setItem('district', district)
+          $('select[name="calc_shipping_district"]').on('change', function () {
+            var target = $(this).children('option:selected')
+            target.attr('selected', '')
+            $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+            var address_2 = target.text()
+            $('input.billing_address_2').attr('value', address_2)
+            district = $('select[name="calc_shipping_district"]').html()
+            localStorage.setItem('district', district)
+            localStorage.setItem('address_2_saved', address_2)
+          })
+        } else {
+          $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>')
+          district = $('select[name="calc_shipping_district"]').html()
+          localStorage.setItem('district', district)
+          localStorage.removeItem('address_1_saved', address_1)
+        }
+      })
+    })
+  })
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </html>

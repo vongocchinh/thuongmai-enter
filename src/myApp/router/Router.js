@@ -12,7 +12,7 @@ import Account from './../Account/container/Account';
 import Contact from './../Contact/container/Contact';
 import Card from './../Card/container/Card';
 import CardDetail from './../Card/container/CardDetail';
-
+import Checkout from './../Checkout/container/Checkout';
 const Router=()=>{
     return (
         <Switch>
@@ -27,6 +27,7 @@ const Router=()=>{
             <Route  path="/track" component={TrackOrder} ></Route>
             <Route  path="/card" component={Card} ></Route>
             <Route  path="/cardDetail" component={CardDetail} ></Route>
+            <Route  path="/checkout" component={Checkout} ></Route>
             <Route  path="/contact" component={Contact} ></Route>
         </Switch>
     )

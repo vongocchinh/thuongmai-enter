@@ -13,6 +13,9 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { useForm, Controller } from "react-hook-form";
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import Select from "react-select";
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +36,9 @@ const Account = () => {
   const [open, setOpen] = React.useState(false);
   const [dateType, setDateType] = React.useState(true);
   const [showInput, setInput] = React.useState(null);
+  const [showEye, setShowEye] = React.useState(false);
+  const [showEye2, setShowEye2] = React.useState(false);
+  const [showEye3, setShowEye3] = React.useState(false);
   const wrapper = React.createRef();
   const handleClickOpen = (e) => {
     if (e === "1") {
@@ -61,6 +67,17 @@ const Account = () => {
       setImgUser(URL.createObjectURL(event.target.files[0]));
     }
   };
+
+  const onShowEye=()=>{
+    setShowEye(!showEye);
+  }
+  const onShowEye2=()=>{
+    setShowEye2(!showEye2);
+  }
+  const onShowEye3=()=>{
+    setShowEye3(!showEye3);
+  }
+
   const showInputModel = (e) => {
     if (e === 1) {
       return (
@@ -156,15 +173,13 @@ const Account = () => {
             defaultValue={""}
             rules={{ required: true, maxLength: 20 }}
             render={({ field }) => (
-              <TextField
-                autoFocus
-                margin="dense"
-                id="name"
-                label="Language"
-                type="text"
-                fullWidth
-                style={{ width: "100%" }}
+              <Select
+                style={{ width: "100%", marginTop: 20 }}
                 {...field}
+                options={[
+                  { value: "VN", label: "Vietnamese" },
+                  { value: "EN", label: "English" },
+                ]}
               />
             )}
           />
@@ -258,8 +273,35 @@ const Account = () => {
     if (e === 5) {
       return (
         <>
-          <Controller
+        <Controller
             name="password"
+            control={control}
+            className="input-with-icon-textfield"
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="input-with-icon-textfield"
+                label="Password"
+                type={showEye?"text":"password"}
+                fullWidth
+                className="input-with-icon-textfield"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment onClick={onShowEye} position="end">
+                      {showEye ? <VisibilityIcon fontSize="small" className="VisibilityIcon" /> : <VisibilityOffIcon fontSize="small" className="VisibilityIcon" />}
+                    </InputAdornment>
+                  ),
+                }}
+                style={{ width: "100%" }}
+              />
+            )}
+          />
+          <Controller
+            name="password_new"
             control={control}
             defaultValue={""}
             rules={{ required: true, maxLength: 20 }}
@@ -269,9 +311,41 @@ const Account = () => {
                 autoFocus
                 margin="dense"
                 id="name"
-                label="Password"
-                type="text"
+                label="Password New"
+                type={showEye2?"text":"password"}
                 fullWidth
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment onClick={onShowEye2} position="end">
+                      {showEye2 ? <VisibilityIcon fontSize="small" className="VisibilityIcon" /> : <VisibilityOffIcon fontSize="small" className="VisibilityIcon" />}
+                    </InputAdornment>
+                  ),
+                }}
+                style={{ width: "100%" }}
+              />
+            )}
+          />
+           <Controller
+            name="password_confirm"
+            control={control}
+            defaultValue={""}
+            rules={{ required: true, maxLength: 20 }}
+            render={({ field }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="name"
+                label="Password Confirm"
+                type={showEye3?"text":"password"}
+                fullWidth
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment onClick={onShowEye3} position="end">
+                      {showEye3 ? <VisibilityIcon fontSize="small" className="VisibilityIcon" /> : <VisibilityOffIcon fontSize="small" className="VisibilityIcon" />}
+                    </InputAdornment>
+                  ),
+                }}
                 style={{ width: "100%" }}
               />
             )}

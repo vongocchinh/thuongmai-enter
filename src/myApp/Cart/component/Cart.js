@@ -63,7 +63,7 @@ const Cart = () => {
             </div>
             <div className="container-checkout-here-item">
                 <Link to="/" className="Link" >Home</Link>
-                <Link to="/" className="Link" >Check Out</Link>
+                <Link to="/checkout" className="Link" >Check Out</Link>
             </div>
         </div>
       </div>

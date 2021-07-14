@@ -25,41 +25,47 @@
         align-items: center;
         flex-direction: row;
         padding: 13px 15px;
-        select{
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            -ms-appearance: none;
-            appearance: none;
-            width: auto;
-            border-radius: 20px;
-            outline: none;
-            border: 1px solid #bab1b1;
-            background-color: white;
-            padding: 7px 10px;
+        .select-option-right{
+            width: 150px;
             cursor: pointer;
-            font-size: 14px;
-            color: #5E5E5E;
-            &:focus{
-                border:  1px solid #4C90D0;
-            }
         }
-        .select::after {
-            content: '25BC';
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 0 1em;
-            background: DodgerBlue;
+        .select-option{
+            width: 250px;
             cursor: pointer;
-            pointer-events: none;
-            -webkit-transition: .25s all ease;
-            -o-transition: .25s all ease;
-            transition: .25s all ease;
-            color: white;
-          }
-          .select:hover::after {
-            color: Gainsboro;
-          }
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+            // -ms-appearance: none;
+            // appearance: none;
+            // width: auto;
+            // // border-radius: 20px;
+            // // outline: none;
+            // // border: 1px solid #bab1b1;
+            // // background-color: white;
+            // // padding: 7px 10px;
+            // cursor: pointer;
+            // font-size: 14px;
+            // color: #5E5E5E;
+            // &:focus{
+            //     border:  1px solid #4C90D0;
+            // }
+        }
+        // .select::after {
+        //     content: '25BC';
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     padding: 0 1em;
+        //     background: DodgerBlue;
+        //     cursor: pointer;
+        //     pointer-events: none;
+        //     -webkit-transition: .25s all ease;
+        //     -o-transition: .25s all ease;
+        //     transition: .25s all ease;
+        //     color: white;
+        //   }
+        //   .select:hover::after {
+        //     color: Gainsboro;
+        //   }
     }
     
     .container-product-list-item{
