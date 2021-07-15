@@ -1,7 +1,10 @@
 import React from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import "./styles/style.scss";
+import DeleteIcon from '@material-ui/icons/Delete';
 import { Link } from "react-router-dom";
+import RemoveIcon from '@material-ui/icons/Remove';
+import AddIcon from '@material-ui/icons/Add';
 const Cart = () => {
   return (
     <>
@@ -11,22 +14,20 @@ const Cart = () => {
             <div>Home</div> <ArrowForwardIosIcon className="icon-size" />
           </div>
           <div className="container-product-title-item">
-            <div>Cart</div>{" "}
+            <div>Cart</div>
           </div>
         </div>
       </div>
       <div className="container">
         <div className="cart-container">
-          <div className="table">
+          <div className="table-cart">
             {[1, 2, 3].map((key) => {
               return (
                 <tr>
-                  <td>X</td>
                   <td>
-                    <Link className="name-hover" to="/detail">
-                      Apple MacBook Pro MF841HN/A 13-inch Laptop
-                    </Link>
+                  <DeleteIcon fontSize="small" color="primary" />
                   </td>
+                  
                   <td>
                     <img
                       alt=""
@@ -35,11 +36,16 @@ const Cart = () => {
                       }
                     />
                   </td>
+                  <td>
+                    <Link className="name-hover" to="/detail">
+                      Apple MacBook Pro MF841HN/A 13-inch Laptop
+                    </Link>
+                  </td>
                   <td>$1,800.00</td>
                   <td>
-                    <button>+</button>
+                    <button><RemoveIcon fontSize="small" color="default" /></button>
                     <span>5</span>
-                    <button>-</button>
+                    <button><AddIcon fontSize="small" color="default" /></button>
                   </td>
                   <td>$1,800.00</td>
                   <td>
@@ -49,22 +55,30 @@ const Cart = () => {
               );
             })}
           </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="container-checkout-here">
+          <div className="container-checkout-here">
             <div className="container-checkout-here-item">
-                <span>Subtotal</span>
-                <span>$1,800.00</span>
+              <span>Subtotal</span>
+              <span>$1,800.00</span>
             </div>
             <div className="container-checkout-here-item">
-                <span>Total</span>
-                <span>10</span>
+              <span>Total</span>
+              <span>10</span>
             </div>
             <div className="container-checkout-here-item">
-                <Link to="/" className="Link" >Home</Link>
-                <Link to="/checkout" className="Link" >Check Out</Link>
+              <span>Quantity</span>
+              <span>10</span>
             </div>
+            <div className="container-checkout-here-item">
+              <div>
+                <Link to="/" className="Link">
+                  Home
+                </Link>
+                <Link to="/checkout" className="Link">
+                  Check Out
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

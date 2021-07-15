@@ -10,6 +10,7 @@ const Checkout = () => {
             setPayment(false);
         }
     }
+
   return (
     <>
       <div className="container">
