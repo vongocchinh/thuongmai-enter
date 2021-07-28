@@ -121,18 +121,31 @@
                         margin: 0;
                     }
                     p:nth-child(1) {
-                        font-size: 19px;
-                        color: #df3737;
+                        font-size: 16px;
+                        color: rgba(0, 0, 0, 0.823);
                     }
                     del {
                         font-size: 12px;
                         margin-left: 10px;
-                        color: #939393;
+                        color: #939393ce;
+                    }
+                    .icon-pd{
+                        display: none;
+                        background-color: blue;
+                        padding: 8px 5px ;
+                        // display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: #FE508D;
+                        font-size: 10px;
+                        color: white;
+                        text-transform: uppercase;
                     }
                     .AddShoppingCartIcon{
-                        margin-top: -26px;
-                        color: #00417e;
+                        color: #FFF;
                         font-size: 24px;
+                        padding: 2px;
                     }
                 }
                 .star-product-home {

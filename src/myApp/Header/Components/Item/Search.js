@@ -13,7 +13,7 @@ const Search = () => {
         <input
           type="text"
           className="input-text"
-          placeholder="Search for Products"
+          placeholder="Search for Products ..."
           {...register("search-name",{required:true})}
         />
         <button type="submit" className="input-submit" value="search">

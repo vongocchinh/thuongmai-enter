@@ -1,10 +1,50 @@
 import React from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import "./styles/style.scss";
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
-import RemoveIcon from '@material-ui/icons/Remove';
-import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from "@material-ui/icons/Remove";
+import AddIcon from "@material-ui/icons/Add";
+
+const Item = () => {
+  return (
+    <tr>
+      <td>
+        <DeleteIcon fontSize="small" color="action" />
+      </td>
+
+      <td>
+        <img
+          alt=""
+          src={
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS82kBkrZs7er7ZfMjvjt2r5GANxk91Sqd5PHccWd1zlLipeykRmMzvLJ1p1d8pCDumo5ONHMs302s&usqp=CAc"
+          }
+        />
+      </td>
+      <td>
+        <Link className="name-hover" to="/detail">
+          Apple MacBook Pro MF841HN/A 13-inch Laptop
+        </Link>
+      </td>
+      <td>$1,800.00</td>
+      <td>
+        <div>
+          <button>
+            <RemoveIcon fontSize="small" color="default" />
+          </button>
+          <span>5</span>
+          <button>
+            <AddIcon fontSize="small" color="default" />
+          </button>
+        </div>
+      </td>
+      <td>$1,800.00</td>
+      <td>
+        <input type="checkbox" />
+      </td>
+    </tr>
+  );
+};
 const Cart = () => {
   return (
     <>
@@ -21,41 +61,27 @@ const Cart = () => {
       <div className="container">
         <div className="cart-container">
           <div className="table-cart">
-            {[1, 2, 3].map((key) => {
-              return (
+            <table>
+              <thead>
                 <tr>
-                  <td>
-                  <DeleteIcon fontSize="small" color="primary" />
-                  </td>
-                  
-                  <td>
-                    <img
-                      alt=""
-                      src={
-                        "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS82kBkrZs7er7ZfMjvjt2r5GANxk91Sqd5PHccWd1zlLipeykRmMzvLJ1p1d8pCDumo5ONHMs302s&usqp=CAc"
-                      }
-                    />
-                  </td>
-                  <td>
-                    <Link className="name-hover" to="/detail">
-                      Apple MacBook Pro MF841HN/A 13-inch Laptop
-                    </Link>
-                  </td>
-                  <td>$1,800.00</td>
-                  <td>
-                    <button><RemoveIcon fontSize="small" color="default" /></button>
-                    <span>5</span>
-                    <button><AddIcon fontSize="small" color="default" /></button>
-                  </td>
-                  <td>$1,800.00</td>
-                  <td>
-                    <input type="checkbox" />
-                  </td>
+                  <th>Action</th>
+                  <th>Image</th>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Check</th>
                 </tr>
-              );
-            })}
+              </thead>
+              <tbody>
+                {[1, 2 ,3 ].map((value, key) => {
+                  return <Item key={key} />;
+                })}
+              </tbody>
+            </table>
           </div>
           <div className="container-checkout-here">
+            <h2>Cart Total</h2>
             <div className="container-checkout-here-item">
               <span>Subtotal</span>
               <span>$1,800.00</span>
@@ -70,11 +96,11 @@ const Cart = () => {
             </div>
             <div className="container-checkout-here-item">
               <div>
-                <Link to="/" className="Link">
+                {/* <Link to="/" className="Link">
                   Home
-                </Link>
+                </Link> */}
                 <Link to="/checkout" className="Link">
-                  Check Out
+                  Order Now
                 </Link>
               </div>
             </div>

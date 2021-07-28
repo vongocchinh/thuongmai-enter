@@ -49,7 +49,8 @@ const Map = () => {
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
-          </div>
+            {/* <div class="earth3dmap-com"><iframe title="My Daily Marathon Tracker" id="iframemap" src="https://maps.google.com/maps?q=https%3A%2F%2Fmaps.googleapis.com%2Fmaps%2Fapi%2Fjs%3Fkey%3DAIzaSyAgoChdC7SAai4Ib7A-XcvRd5aN8a6pzdw%26v%3D3.exp%26libraries%3Dgeometry%2Cdrawing%2Cplaces&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="500" frameborder="0" scrolling="no"></iframe></div> */}
+            </div>
           <div className="container-map-right">
             <div>
               <span>

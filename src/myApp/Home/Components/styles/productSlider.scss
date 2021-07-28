@@ -59,12 +59,13 @@
             margin: 0;
         }
         p:nth-child(1){
-            font-size: 17px;
-            color: #DF3737;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.837);
         }
         p:nth-child(2){
-            color: #939393;
+            color: #939393c7;
             margin-left: 10px;
+            font-size: 12px;
         }
     }
     .star-product-home{

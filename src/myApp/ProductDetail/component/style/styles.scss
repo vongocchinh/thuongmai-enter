@@ -117,11 +117,12 @@
                         p:nth-child(2) {
                             font-size: 10px;
                             margin: 0 0 0em;
-                            color: #5e5e5e;
+                            color: #5e5e5ed0;
                         }
                         div:nth-child(3) {
-                            color: #df3737;
-                            font-weight: 600;
+                            color: rgba(0, 0, 0, 0.789);
+                            font-size: 14px;
+                            // font-weight: 550;
                             // margin-bottom: -20px;
                             // position: relative;
                         }

@@ -8,7 +8,7 @@ import { Grid } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 // import SW from '../asset/sw.jpg';
-import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+// import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Pagination } from "@material-ui/lab";
 import Filter from "./Item/Filter";
 import StarRatings from "react-star-ratings";
@@ -103,7 +103,10 @@ const ProductList = () => {
                                 $1.900.00
                                 <del>$2.900.00</del>
                               </p>
-                              <AddShoppingCartIcon className="AddShoppingCartIcon" />
+                              <div className="icon-pd">
+                              {/* <AddShoppingCartIcon className="AddShoppingCartIcon" /> */}
+                              New
+                              </div>
                             </div>
                             <div className="star-product-home">
                               <StarRatings
