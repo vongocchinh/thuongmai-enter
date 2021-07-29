@@ -104,15 +104,15 @@ const ProductTop = () => {
           </ul>
         </div>
         <div className="product-detail-right-img-item-top-price">
-          <span>$1,999.00</span>{" "}
+          <span>36.000.000 VNĐ</span>{" "}
           <span>
-            <del>$2,299.00</del>
+            <del>38.000.000 VNĐ</del>
           </span>
         </div>
         <div className="product-detail-right-img-item-top-add-cart">
           <button>
             <AddShoppingCartIcon />
-            <p> Add to cart</p>
+            <p> ADD CART</p>
           </button>
         </div>
       </div>

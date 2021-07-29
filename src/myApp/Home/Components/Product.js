@@ -140,9 +140,9 @@ const Product = () => {
                               />
                             </Link>
                             <div className="price-product-home">
-                              <p>$1.900.00</p>
+                              <p>812.000.000</p>
                               <p>
-                                <del>$2.900.00</del>
+                                <del>170.000.000</del>
                               </p>
                             </div>
                             <div className="star-product-home">
@@ -177,9 +177,9 @@ const Product = () => {
                               <img alt="" src={SWB2} />
                             </Link>
                             <div className="price-product-home">
-                              <p>$1.900.00</p>
+                              <p>812.000.000</p>
                               <p>
-                                <del>$2.900.00</del>
+                                <del>170.000.000</del>
                               </p>
                             </div>
                             <div className="star-product-home">
@@ -214,9 +214,9 @@ const Product = () => {
                               <img alt="" src={SWB} />
                             </Link>
                             <div className="price-product-home">
-                              <p>$1.900.00</p>
+                              <p>812.000.000</p>
                               <p>
-                                <del>$2.900.00</del>
+                                <del>170.000.000</del>
                               </p>
                             </div>
                             <div className="star-product-home">

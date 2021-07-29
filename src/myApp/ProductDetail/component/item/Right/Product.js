@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/styles.scss";
 import { Grid } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
-import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+// import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Link } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 const Product = () => {
@@ -31,12 +31,12 @@ const Product = () => {
                     </Link>
                     <div className="price-product-home">
                       <p>
-                        $1.900.00
-                        <del>$2.900.00</del>
+                        12.000.000 VNĐ
+                        <del>17.000.000 VNĐ</del>
                       </p>
-                      <Link to="/cart" >
+                      {/* <Link to="/cart" >
                       <AddShoppingCartIcon className="AddShoppingCartIcon" />
-                      </Link>
+                      </Link> */}
                     </div>
                     <div className="star-product-home">
                       <StarRatings
