@@ -87,12 +87,12 @@ const Product = () => {
           </div>
           <div className="container-product-home-right">
             <div className="header-tag-product">
-              <AppBar position="static" color="default">
+              <AppBar position="static" color="#FFF">
                 <Tabs
                   value={value}
                   onChange={handleChange}
-                  indicatorColor="primary"
-                  textColor="inherit"
+                  indicatorColor="#FFF"
+                  textColor="#000"
                   variant="fullWidth"
                   aria-label="full width tabs example"
                 >
