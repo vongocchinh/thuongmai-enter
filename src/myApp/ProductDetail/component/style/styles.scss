@@ -272,13 +272,14 @@
                     flex-direction: row;
                     margin-top: 20px;
                     justify-content: flex-start;
-                    align-items: center;
+                    align-items: flex-end;
                     span:nth-child(1) {
                         font-size: 24px;
                         margin-right: 20px;
                     }
                     span:nth-child(2) {
                         font-size: 14px;
+                        color: #e5e3f9d4;
                     }
                 }
                 .product-detail-right-img-item-top-add-cart {
